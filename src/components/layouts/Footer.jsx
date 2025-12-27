@@ -3,7 +3,7 @@ import Logo from "./Logo";
 
 const Footer = () => {
   return (
-    <div className="footer  p-10 w-11/12 mx-auto sm:flex justify-between">
+    <div className="footer  py-10 w-11/12 mx-auto sm:flex justify-between">
       <Logo />
       <nav>
         <h6 className="footer-title">Services</h6>
