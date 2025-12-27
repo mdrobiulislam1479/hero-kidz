@@ -19,11 +19,11 @@ export default function RootLayout({ children }) {
         className={`${poppins.className} antialiased`}
         cz-shortcut-listen="true"
       >
-        <header>
+        <header className="bg-base-200 text-base-content">
           <Navber />
         </header>
         <main>{children}</main>
-        <footer>
+        <footer className="bg-base-200 text-base-content">
           <Footer />
         </footer>
       </body>
