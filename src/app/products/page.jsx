@@ -1,13 +1,13 @@
 import { getProducts } from "@/actions/server/product";
+import ProductCard from "@/components/cards/ProductsCard";
 import React from "react";
-import ProductCard from "../cards/ProductsCard";
 
-const Products = async () => {
+const ProductsPage = async () => {
   const products = await getProducts();
   return (
     <div>
       <h2 className="text-5xl font-bold text-center mb-10">
-        Our <span className="text-primary">Products</span>
+        All <span className="text-primary">Products</span>
       </h2>
       <div className="grid grid-cols-4 gap-5">
         {products.map((product) => (
@@ -18,4 +18,4 @@ const Products = async () => {
   );
 };
 
-export default Products;
+export default ProductsPage;
