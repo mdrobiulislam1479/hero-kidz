@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProductCard({ product }) {
   const { image, title, reviews, price, sold } = product;
@@ -29,9 +30,12 @@ export default function ProductCard({ product }) {
 
         <div className="mt-4">
           <button className="btn btn-primary w-full">Add to Cart</button>
-          <button className="btn btn-primary btn-outline mt-2 w-full">
+          <Link
+            href={`/products/${product._id}`}
+            className="btn btn-primary btn-outline mt-2 w-full"
+          >
             View Details
-          </button>
+          </Link>
         </div>
       </div>
     </div>
