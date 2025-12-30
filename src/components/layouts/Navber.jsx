@@ -56,7 +56,7 @@ const Navber = () => {
       </div>
       <div className="navbar-end w-auto">
         <RiShoppingCartFill className="btn p-2 btn-primary mr-2" />
-        <Link href={"/login"} className="btn btn-primary btn-outline">
+        <Link href={"/auth/login"} className="btn btn-primary btn-outline">
           Login
         </Link>
       </div>
