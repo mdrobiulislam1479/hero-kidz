@@ -1,9 +1,10 @@
 import { getSingleProducts } from "@/actions/server/product";
+import CartButton from "@/components/buttons/CartButton";
 import Image from "next/image";
 
 const ProductDetails = async ({ params }) => {
   const { id } = await params;
-  const products = await getSingleProducts(id);
+  const product = await getSingleProducts(id);
 
   const {
     title,
@@ -17,7 +18,7 @@ const ProductDetails = async ({ params }) => {
     ratings,
     info = [],
     qna = [],
-  } = products;
+  } = product;
 
   const finalPrice = price - (price * discount) / 100;
 
@@ -65,9 +66,7 @@ const ProductDetails = async ({ params }) => {
         </div>
 
         {/* Add to Cart Button */}
-        <button className="btn btn-primary mt-6 w-full text-lg">
-          Add to Cart
-        </button>
+        <CartButton product={product}></CartButton>
 
         {/* Description */}
         <div className="mt-8">

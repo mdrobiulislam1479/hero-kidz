@@ -14,5 +14,5 @@ export const getSingleProducts = async (id) => {
   }
   const quary = { _id: new ObjectId(id) };
   const products = await dbconnect("products").findOne(quary);
-  return products;
+  return { ...products, _id: products._id.toString() } || {};
 };

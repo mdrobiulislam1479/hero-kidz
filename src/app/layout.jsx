@@ -13,7 +13,8 @@ export const fontBangla = localFont({
 });
 
 export const metadata = {
-  title: "Hero Kidz",
+  default: "Hero Kidz",
+  templete: "%s | Hero Kidz",
   description: "A toy selling e-commerce website",
 };
 
