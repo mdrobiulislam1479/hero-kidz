@@ -16,7 +16,7 @@ export const postUser = async (payload) => {
   const newUser = {
     provider: "credentials",
     name,
-    name,
+    email,
     password: await bcrypt.hash(password, 14),
     role: "user",
   };
