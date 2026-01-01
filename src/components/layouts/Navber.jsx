@@ -1,8 +1,8 @@
 import React from "react";
 import Logo from "./Logo";
-import Link from "next/link";
 import { RiShoppingCartFill } from "react-icons/ri";
 import NavLink from "../buttons/NavLink";
+import AuthButton from "../buttons/AuthButton";
 
 const Navber = () => {
   const nav = (
@@ -56,9 +56,7 @@ const Navber = () => {
       </div>
       <div className="navbar-end w-auto">
         <RiShoppingCartFill className="btn p-2 btn-primary mr-2" />
-        <Link href={"/auth/login"} className="btn btn-primary btn-outline">
-          Login
-        </Link>
+        <AuthButton />
       </div>
     </div>
   );
